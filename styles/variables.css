@@ -1,1 +1,18 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --main-font-family: 'Inter-Variable';
+    --accent-font-family: 'Press Start 2P';
+
+    --main-text-size: 14px;
+    --title-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+    --description-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+    --card-heading-size: 18px;
+
+    --regular-font-weight: 400;
+    --bold-font-weight: 700;
+
+    --bg-color: #fff;
+
+    --section-gap: 50px;
+  }
