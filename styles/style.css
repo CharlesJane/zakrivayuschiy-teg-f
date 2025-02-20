@@ -80,8 +80,14 @@
 .section__cards {
   display: grid;
   justify-items: center;
+}
+
+.section__cards-list {
+  display: grid;
+  justify-items: center;
   gap: var(--section-gap);
   inline-size: var(--sections-width);
+  margin-block-end: 50px;
 }
 
 .card__title {
@@ -172,4 +178,49 @@
 .button-save__text {
   white-space: nowrap;
   line-height: 90%;
+}
+
+.dialog[open] {
+  position: fixed;
+  inset: 0;
+  inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
+  padding-block: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 20px;
+  justify-content: center;
+}
+
+dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+} 
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.7);
+} 
+
+.dialog .button-save__icon {
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+.dialog__description {
+  line-height: 150%;
+  width: clamp(12.375rem, 11.5827rem + 3.3803vw, 14.625rem);
+  font-family: var(--accent-font-family), Arial, Helvetica, sans-serif;
+}
+
+.dialog__button {
+  grid-row: 2 / 3;
+  inline-size: clamp(16.0625rem, 15.2702rem + 3.3803vw, 18.3125rem);
+  padding-block: 12.5px;
+}
+
+@media (width <= 375px) {
+  .button-save__icon {
+    inline-size: 28px;
+    block-size: 28px;
+  }
 }
