@@ -11,32 +11,58 @@
 */
 
 .page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  inline-size: clamp(375px, 100%, 700px);
-  font-family: var(--main-font-family), Arial, Verdana, Tahoma, sans-serif;
+  font-family: 'Inter', Arial, Verdana, Tahoma, sans-serif;
   font-size: var(--main-text-size);
   font-variation-settings: 'wght' var(--regular-font-weight);
   background-color: var(--bg-color);
   padding: 100px 0;
+  gap: 100px;
   
   background-image: url();
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  align-items: center;
 }
 
+@supports (font-variation-settings: normal) {
+  .page {
+      font-family: var(--main-font-family), sans-serif;
+  }
+}
+
+.button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--accent-font-family), Arial, Helvetica, sans-serif;
+}
+
+.bordered {
+  border: var(--border-width) solid var(--main-color);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Header */
+
 .header {
-  border: 2px solid #000;
-  inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-  margin-block-end: 100px;
+  inline-size: var(--sections-width);
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: var(--accent-font-family);
-  text-transform: uppercase;
-  padding: clamp(7.5rem, 2.388vw + 6.955rem, 8rem) clamp(0.875rem, 31.642vw - 6.343rem, 7.5rem);
+  font-family: var(--accent-font-family), Arial, Helvetica, sans-serif;
+  padding: clamp(7.5rem, 0.751vw + 7.324rem, 8rem) clamp(0.875rem, 9.953vw - 1.458rem, 7.5rem);
 }
 
 .header__title {
@@ -49,19 +75,57 @@
   font-size: var(--description-size);
 }
 
+/* Cards */
+
 .section__cards {
   display: grid;
+  justify-items: center;
   gap: var(--section-gap);
-}
-
-.card {
-  border: 2px solid #000;
+  inline-size: var(--sections-width);
 }
 
 .card__title {
   font-size: var(--card-heading-size);
   padding: 3px 10px;
   font-variation-settings: 'wght' var(--bold-font-weight);
+  border-block-end: var(--border-width) solid var(--main-color);
+}
+
+.card__picture {
+  position: relative;
+  line-height: 0;
+  background-color: var(--bg-color);
+  border-block-end: var(--border-width) solid var(--main-color);
+}
+
+.card__picture_image-tag {
+  position: absolute;
+  inset-inline-end: clamp(0.813rem, 1.127vw + 0.548rem, 1.563rem);
+  inset-block-start: 25px;
+  font-family: var(--accent-font-family), Arial, Helvetica, sans-serif;
+  text-shadow:
+  -1px 0 color-mix(in srgb, var(--accent-color) 50%, transparent), 
+  0 1px color-mix(in srgb, var(--accent-color) 50%, transparent), 
+  1px 0 color-mix(in srgb, var(--accent-color) 50%, transparent), 
+  0 -1px color-mix(in srgb, var(--accent-color) 50%, transparent);
+  color: color-mix(in srgb, var(--main-color) 50%, transparent);
+  mix-blend-mode: hard-light;
+}
+
+@supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px color-mix(in srgb, var(--accent-color) 50%, transparent))) {
+  .card__picture_image-tag {
+    -webkit-text-stroke: 1px color-mix(in srgb, var(--accent-color) 50%, transparent);
+    text-stroke: 1px color-mix(in srgb, var(--accent-color) 50%, transparent);
+    text-shadow: none;
+  }
+}
+
+.card__picture_image {
+  inline-size: 100%;
+  block-size: 100%;
+  max-block-size: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card__footer {
@@ -71,10 +135,41 @@
   gap: 25px;
 }
 
-.card__text:not(:last-child) {
+.card__description__text:not(:last-child) {
   padding-block-end: 27px;
 }
 
-.card__buttons {
-  align-self: flex-end;
+.card__footer__buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.card__icon-button {
+  line-height: 0;
+}
+
+.card__like-button {
+  padding: 10.5px 35px;
+}
+
+.button-save {
+  display: flex;
+  flex-wrap: wrap;
+  inline-size: clamp(18.875rem, 17.7967rem + 4.6009vw, 21.9375rem);
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  line-height: 0;
+  padding: 15px 20px;
+}
+
+.button-save__icon {
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+.button-save__text {
+  white-space: nowrap;
+  line-height: 90%;
 }
