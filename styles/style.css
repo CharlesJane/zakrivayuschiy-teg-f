@@ -36,8 +36,8 @@
 }
 
 .button {
-  color: var(--main-color);
-  background-color: var(--accent-color);
+  color: var(--accent-color);
+  background-color: var(--bg-color);
   cursor: pointer;
   position: relative;
   border: none;
@@ -76,7 +76,6 @@
 .button__text {
   white-space: nowrap;
   line-height: 90%;
-  color: var(--accent-color);
   mix-blend-mode: difference;
   text-align: center;
   align-self: center;
@@ -121,7 +120,7 @@
 }
 
 .blur {
-  filter: blur(0.5);
+  filter: blur(5px) grayscale(1);
 }
 
 .bright {
@@ -242,6 +241,7 @@
 }
 
 .button-save {
+  background-color: var(--accent-color);
   display: flex;
   flex-wrap: wrap;
   inline-size: clamp(18.875rem, 17.7967rem + 4.6009vw, 21.9375rem);
@@ -251,10 +251,9 @@
   padding: 15px 20px;
 }
 
-.button-save__icon {
+.button-save .button-save__icon {
   inline-size: 21px;
   block-size: 21px;
-  color: var(--accent-color);
   position: relative;
   mix-blend-mode: difference;
 }
