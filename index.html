@@ -678,26 +678,26 @@
         </button>
       </section>
     </main>
-    
+
+    <dialog class="dialog" id="popup">
+      <svg class="button-save__icon" viewBox="0 0 21 21">
+        <use href="./svg/floppy.svg#floppy" />
+      </svg>
+
+      <p class="dialog__description uppercase"
+        >Вставьте дискету, чтобы продолжить</p
+      >
+
+      <button
+        type="button"
+        class="dialog__button button bordered"
+        onclick="window['popup'].close()"
+        aria-controls="popup"
+      >
+        <span class="button__text uppercase">ок</span>
+      </button>
+    </dialog>
+
     <script src="./scripts/like.js"></script>
   </body>
-
-  <dialog class="dialog" id="popup" aria-hidden="true">
-    <svg class="button-save__icon" viewBox="0 0 21 21">
-      <use href="./svg/floppy.svg#floppy" />
-    </svg>
-
-    <p class="dialog__description uppercase"
-      >Вставьте дискету, чтобы продолжить</p
-    >
-
-    <button
-      type="button"
-      class="dialog__button button bordered"
-      onclick="window['popup'].close()"
-      aria-controls="popup"
-    >
-      <span class="button__text uppercase">ок</span>
-    </button>
-  </dialog>
 </html>
