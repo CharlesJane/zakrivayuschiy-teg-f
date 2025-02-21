@@ -7,7 +7,7 @@
     --main-text-size: 14px;
     --title-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
     --description-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
-    --card-heading-size: 18px;
+    --card-size: 18px;
 
     --regular-font-weight: 400;
     --bold-font-weight: 700;
