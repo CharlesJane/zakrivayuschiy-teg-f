@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/animations.css">
 
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="icon" href="./images/favicon.ico" sizes="any">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./images/favicon.png">
   </head>
   <body class="page">
     <header class="header bordered">
@@ -28,9 +28,9 @@
         <ul class="section__cards-list">
           <li class="section__cads-item">
             <article class="card bordered">
-              <h3 class="card__title">
+              <h2 class="card__title">
                 Фритрек и нулевой спринт: Подготовка к работе
-              </h3>
+              </h2>
 
               <div class="card__picture">
                 <img
@@ -64,6 +64,7 @@
                       viewBox="0 0 39 36"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
                     >
                       <g class="heart">
                         <path
@@ -106,7 +107,7 @@
 
           <li class="section__cads-item">
             <article class="card bordered">
-              <h3 class="card__title">1 спринт: Я — чистый лист</h3>
+              <h2 class="card__title">1 спринт: Я — чистый лист</h2>
 
               <div class="card__picture">
                 <img
@@ -144,6 +145,7 @@
                       viewBox="0 0 39 36"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
                     >
                       <g class="heart">
                         <path
@@ -186,7 +188,7 @@
 
           <li class="section__cads-item">
             <article class="card bordered">
-              <h3 class="card__title">1 спринт: А если не получится?</h3>
+              <h2 class="card__title">1 спринт: А если не получится?</h2>
 
               <div class="card__picture">
                 <img
@@ -222,6 +224,7 @@
                       viewBox="0 0 39 36"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
                     >
                       <g class="heart">
                         <path
@@ -264,7 +267,7 @@
 
           <li class="section__cads-item">
             <article class="card bordered">
-              <h3 class="card__title">2 спринт: Погоня за идеалом</h3>
+              <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
 
               <div class="card__picture">
                 <img
@@ -299,6 +302,7 @@
                       viewBox="0 0 39 36"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
                     >
                       <g class="heart">
                         <path
@@ -341,7 +345,7 @@
 
           <li class="section__cads-item">
             <article class="card bordered">
-              <h3 class="card__title">2 спринт: О тех, кто рядом</h3>
+              <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
 
               <div class="card__picture">
                 <img
@@ -377,6 +381,7 @@
                       viewBox="0 0 39 36"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
                     >
                       <g class="heart">
                         <path
@@ -419,7 +424,7 @@
 
           <li class="section__cads-item">
             <article class="card bordered">
-              <h3 class="card__title">3 спринт: Обходные стратегии</h3>
+              <h2 class="card__title">3 спринт: Обходные стратегии</h2>
 
               <div class="card__picture">
                 <img
@@ -452,6 +457,7 @@
                       viewBox="0 0 39 36"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
                     >
                       <g class="heart">
                         <path
@@ -494,7 +500,7 @@
 
           <li class="section__cads-item">
             <article class="card bordered">
-              <h3 class="card__title">3 спринт: Когда опускаются руки</h3>
+              <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
 
               <div class="card__picture">
                 <img
@@ -531,6 +537,7 @@
                       viewBox="0 0 39 36"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
                     >
                       <g class="heart">
                         <path
@@ -573,7 +580,7 @@
 
           <li class="section__cads-item">
             <article class="card bordered">
-              <h3 class="card__title">«Сейчас я здесь»</h3>
+              <h2 class="card__title">«Сейчас я здесь»</h2>
 
               <div class="card__picture">
                 <img
@@ -611,6 +618,7 @@
                       viewBox="0 0 39 36"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
                     >
                       <g class="heart">
                         <path
@@ -670,26 +678,26 @@
         </button>
       </section>
     </main>
-
-    <dialog class="dialog" id="popup">
-      <svg class="button-save__icon" viewBox="0 0 21 21">
-        <use href="./svg/floppy.svg#floppy" />
-      </svg>
-
-      <span class="dialog__description uppercase"
-        >Вставьте<br />дискету, чтобы продолжить</span
-      >
-
-      <button
-        type="button"
-        class="dialog__button button bordered"
-        onclick="window['popup'].close()"
-        aria-controls="popup"
-      >
-        <span class="button__text uppercase">ок</span>
-      </button>
-    </dialog>
-
+    
     <script src="./scripts/like.js"></script>
   </body>
+
+  <dialog class="dialog" id="popup" aria-hidden="true">
+    <svg class="button-save__icon" viewBox="0 0 21 21">
+      <use href="./svg/floppy.svg#floppy" />
+    </svg>
+
+    <p class="dialog__description uppercase"
+      >Вставьте дискету, чтобы продолжить</p
+    >
+
+    <button
+      type="button"
+      class="dialog__button button bordered"
+      onclick="window['popup'].close()"
+      aria-controls="popup"
+    >
+      <span class="button__text uppercase">ок</span>
+    </button>
+  </dialog>
 </html>
