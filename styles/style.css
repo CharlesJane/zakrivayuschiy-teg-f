@@ -322,26 +322,6 @@
   animation: fill 0.3s linear 0.3s;
 }
 
-@keyframes scale {
-  from {
-    scale: 1;
-  }
-
-  to {
-    scale: 1.25;
-  }
-}
-
-@keyframes fill {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .button-save {
   display: flex;
   flex-wrap: wrap;
